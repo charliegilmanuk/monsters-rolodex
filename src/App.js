@@ -2,6 +2,7 @@ import './App.css';
 import {useEffect, useState} from "react";
 import {CardList} from "./components/card-list/card-list.component";
 import {SearchBox} from "./components/search-box/search-box.component";
+import {NavBar} from "./components/nav-bar/nav-bar.component";
 
 function App() {
     const [monsters, setMonsters] = useState([]);
@@ -31,6 +32,7 @@ function App() {
 
     return (
         <div className="App">
+            <NavBar />
             <h1 className="text-h1">Monsters Rolodex</h1>
             <SearchBox placeholder="Search monsters..." handleChange={handleChange}/>
             <CardList monsters={filteredMonsters}/>
